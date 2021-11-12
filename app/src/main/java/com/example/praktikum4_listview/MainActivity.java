@@ -2,6 +2,7 @@ package com.example.praktikum4_listview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,13 +23,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Class<?> action Class = null;
+        Class<?> actionClass = null;
         if(v.getId() == R.id.btn_simpel){
-
-
+            actionClass = SimpelListActivity.class;
         } else if(v.getId() == R.id.btn_custom){
-
+            actionClass = CustomListActivity.class;
         }
+
+        Intent menuIntent = new Intent(MainActivity.this, actionClass);
+        startActivity(menuIntent);
 
     }
 }
