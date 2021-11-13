@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class CustomListActivity extends AppCompatActivity {
 
-    private ListView lvCustom;
+    private ListView lvItem;
     private String[] players = new String[]{
             "Cristiano Ronaldo", "Paulo Dybala", "Mario Mandžukić",
             "Miralem Pjanić", "Sami Khedira", "Emre Can", "Claudio Marchisio",
@@ -27,5 +27,9 @@ public class CustomListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_list);
+
+        lvItem = findViewById(R.id.list_custom);
+        JuveAdapter adapter = new JuveAdapter(this, players, pos, num);
+        lvItem.setAdapter(adapter);
     }
 }

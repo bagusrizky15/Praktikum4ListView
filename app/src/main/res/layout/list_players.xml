@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
@@ -12,26 +13,47 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ronaldo"
+                    android:textSize="18dp"/>
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="18"
+                    android:textAlignment="viewEnd"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tv_pos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Forward"
-                android:gravity="center"
-                android:textSize="24dp"
-                android:padding="20dp"
-                android:textColor="@color/cardview_dark_background">
-
-            </TextView>
+                android:textSize="16dp"
+                android:textColor="@color/design_default_color_secondary_variant"/>
+            </LinearLayout>
 
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
